@@ -1,8 +1,8 @@
 # Travel Connect Application
 
 ## Overview
-
-Welcome to the Travel Connect  Application! This project consists of three interconnected components designed to provide a comprehensive air travel experience.
+This project is a solution to a full-stack technical test. In the test statement, there was a mention of consuming an API that returns flight data "https://recruiting-api.....es/api/flights". However, this API was down at the time of the test, so the 'flight serve' API was created in order to complete the test.
+ 
 
 ### 1. Flight Service (Built with .NET 6)
 
@@ -18,7 +18,7 @@ The Travel Connect API consumes the Flight Service and returns the optimal route
 
 ### 3.Travel Connect Web (Built with Angular 17)
 
-TheTravel Connect Web is the user-facing application developed in Angular 17. It seamlessly integrates with the Air Travel API to provide users with an intuitive interface to explore and select their desired flight routes.
+The Travel Connect Web is the user-facing application developed in Angular 17. It seamlessly integrates with the Air Travel API to provide users with an intuitive interface to explore and select their desired flight routes.
 
 ## Versions
 
