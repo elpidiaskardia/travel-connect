@@ -1,0 +1,149 @@
+﻿[
+  {
+    "DepartureStation": "MDE",
+    "ArrivalStation": "CLO",
+    "FlightCarrier": "AV",
+    "FlightNumber": "101",
+    "Price": 900.0
+  },
+  {
+    "DepartureStation": "BOG",
+    "ArrivalStation": "PEI",
+    "FlightCarrier": "LA",
+    "FlightNumber": "202",
+    "Price": 800.0
+  },
+  {
+    "DepartureStation": "CAL",
+    "ArrivalStation": "CTG",
+    "FlightCarrier": "VH",
+    "FlightNumber": "303",
+    "Price": 1100.0
+  },
+  {
+    "DepartureStation": "MDE",
+    "ArrivalStation": "BOG",
+    "FlightCarrier": "AV",
+    "FlightNumber": "404",
+    "Price": 1000.0
+  },
+  {
+    "DepartureStation": "CTG",
+    "ArrivalStation": "MDE",
+    "FlightCarrier": "LA",
+    "FlightNumber": "505",
+    "Price": 1200.0
+  },
+  {
+    "DepartureStation": "PEI",
+    "ArrivalStation": "BOG",
+    "FlightCarrier": "AV",
+    "FlightNumber": "606",
+    "Price": 950.0
+  },
+  {
+    "DepartureStation": "CAL",
+    "ArrivalStation": "MDE",
+    "FlightCarrier": "VH",
+    "FlightNumber": "707",
+    "Price": 850.0
+  },
+  {
+    "DepartureStation": "BOG",
+    "ArrivalStation": "CTG",
+    "FlightCarrier": "LA",
+    "FlightNumber": "808",
+    "Price": 1300.0
+  },
+  {
+    "DepartureStation": "PEI",
+    "ArrivalStation": "CAL",
+    "FlightCarrier": "AV",
+    "FlightNumber": "909",
+    "Price": 1100.0
+  },
+  {
+    "DepartureStation": "CTG",
+    "ArrivalStation": "BOG",
+    "FlightCarrier": "VH",
+    "FlightNumber": "1010",
+    "Price": 1000.0
+  },
+  {
+    "DepartureStation": "MDE",
+    "ArrivalStation": "PEI",
+    "FlightCarrier": "AV",
+    "FlightNumber": "1111",
+    "Price": 950.0
+  },
+  {
+    "DepartureStation": "BOG",
+    "ArrivalStation": "CAL",
+    "FlightCarrier": "LA",
+    "FlightNumber": "1212",
+    "Price": 1200.0
+  },
+  {
+    "DepartureStation": "CAL",
+    "ArrivalStation": "MDE",
+    "FlightCarrier": "VH",
+    "FlightNumber": "1313",
+    "Price": 900.0
+  },
+  {
+    "DepartureStation": "PEI",
+    "ArrivalStation": "CTG",
+    "FlightCarrier": "AV",
+    "FlightNumber": "1414",
+    "Price": 1100.0
+  },
+  {
+    "DepartureStation": "CTG",
+    "ArrivalStation": "BOG",
+    "FlightCarrier": "LA",
+    "FlightNumber": "1515",
+    "Price": 1000.0
+  },
+  {
+    "DepartureStation": "MDE",
+    "ArrivalStation": "BOG",
+    "FlightCarrier": "AV",
+    "FlightNumber": "1616",
+    "Price": 850.0
+  },
+  {
+    "DepartureStation": "BOG",
+    "ArrivalStation": "PEI",
+    "FlightCarrier": "LA",
+    "FlightNumber": "1717",
+    "Price": 1300.0
+  },
+  {
+    "DepartureStation": "CAL",
+    "ArrivalStation": "MDE",
+    "FlightCarrier": "VH",
+    "FlightNumber": "1818",
+    "Price": 950.0
+  },
+  {
+    "DepartureStation": "PEI",
+    "ArrivalStation": "CTG",
+    "FlightCarrier": "AV",
+    "FlightNumber": "1919",
+    "Price": 1100.0
+  },
+  {
+    "DepartureStation": "CTG",
+    "ArrivalStation": "BOG",
+    "FlightCarrier": "LA",
+    "FlightNumber": "2020",
+    "Price": 1000.0
+  },
+  {
+    "DepartureStation": "VVC",
+    "ArrivalStation": "AXM",
+    "FlightCarrier": "LC",
+    "FlightNumber": "2121",
+    "Price": 950.0
+  }
+]

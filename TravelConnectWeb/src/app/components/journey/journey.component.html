@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card bg-ligh bg-gradient ">
+        <div class="card-body">
+          <h3 class="card-title">Journey Information</h3>
+          <div class="row">
+            <div class="col-auto fs-5"><i class="bi bi-airplane"></i></div>
+            <div class="col fs-5">{{ journey.origin }}</div>
+            <div class="col-auto fs-5"><i class="bi bi-airplane"></i></div>
+            <div class="col fs-5 ">{{ journey.destination }}</div>
+            <div class="col fs-5">{{ journey.price | currencyPipe}}</div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="card bg-light bg-gradient ">
+        <div class="card-body">
+          <h3 class="card-title">Flights</h3>
+          <table class="table bg-light ">
+            <thead>
+              <tr>
+                <th scope="col" class="fs-5">Origin</th>
+                <th scope="col"class="fs-5">Transport</th>
+                <th scope="col"class="fs-5">Destination</th>
+                <th scope="col"class="fs-5">Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for ( flight of journey.flights; track $index){
+              <tr>
+                <td class="fs-5">{{ flight.origin }}</td>
+                <td class="fs-5">{{ flight.transport.flightCarrier }} - {{ flight.transport.flightNumber }}</td>
+                <td class="fs-5">{{ flight.destination }}</td>
+                <td class="fs-5">{{ flight.price | currencyPipe}}</td>
+              </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

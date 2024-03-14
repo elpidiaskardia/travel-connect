@@ -1,0 +1,13 @@
+<nav class="navbar bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white fs-3 fw-bolder  ps-5">Travel Connect</a>
+      <form class="d-flex  fs-4" role="search">
+        <select  [(ngModel)]="selectedCurrency" name="selectedCurrency" (change)="setCurrency()" class="  custom-select ms-auto rounded p-1 me-3">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="COP">COP</option>
+          </select>
+      </form>
+    </div>
+  </nav>
+  
