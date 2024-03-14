@@ -27,6 +27,16 @@ The Travel Connect Web is the user-facing application developed in Angular 17. I
 ### Frontend
 - Angular 17.2.3
 - Node 18.17.0
+
+## Architecture of Travel Connect API
+
+the architecture was implemented using the layered architecture approach with the following layers:
+
+- TravelConnect API
+- Travel Connect Impl (Implementation)
+- TravelConnect DataAccess
+
+  
 ## How to run the application
 
 To set up the Travel Connect  Application, follow these steps:
