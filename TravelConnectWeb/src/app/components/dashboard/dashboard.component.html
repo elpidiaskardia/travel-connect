@@ -1,52 +1,57 @@
 <div class="container">
-  <p class="fs-1 p-4  text-center "> Hi, Where are you <strong> Flying </strong> to ?</p>
-  <form [formGroup]="formSearch" (ngSubmit)="searchJourney()" class="form-inline">
-    <div class="mb-3">
-      <label for="origin" class="form-label font-face fs-4">Origin:</label>
-      <input type="text" name="Origin" class="form-control fs-4" formControlName="origin" id="origin"
-        placeholder="Enter origin" maxlength="3" minlength="3" required>
-        @if(messageErrorOrigin && buttonPressed){
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <p class="fs-1 p-4  text-center "> Hi, Where are you <strong> Flying </strong> to ?</p>
+      <form [formGroup]="formSearch" (ngSubmit)="searchJourney()" class="form-inline">
+        <div class="mb-3">
+          <label for="origin" class="form-label font-face fs-4">Origin:</label>
+          <input (input)="validateInput()" type="text" name="Origin" class="form-control fs-4" formControlName="origin"
+            id="origin" placeholder="Enter origin" maxlength="3" minlength="3" required>
+          @if( messageErrors.origin){
           <div class="error-message">
-            {{messageErrorOrigin}}
+            {{ messageErrors.origin}}
           </div>
-        }
-    </div>
-    <div class="mb-3">
-      <label for="destination" class="form-label fs-4">Destination:</label>
-      <input type="text" class="form-control fs-4" formControlName="destination" id="destination"
-        placeholder="Enter destination" maxlength="3" minlength="3" required>
-        @if(messageErrorDestination && buttonPressed){
+          }
+        </div>
+        <div class="mb-3">
+          <label for="destination" class="form-label fs-4">Destination:</label>
+          <input (input)="validateInput()" type="text" class="form-control fs-4" formControlName="destination"
+            id="destination" placeholder="Enter destination" maxlength="3" minlength="3" required>
+          @if(messageErrors.destination){
           <div class="error-message">
-            {{messageErrorDestination}}
+            {{messageErrors.destination}}
           </div>
-        }
+          }
+        </div>
+        <button type="submit" class="btn btn-primary fs-4">Search</button>
+      </form>
     </div>
-    <button type="submit" class="btn btn-primary fs-4">Search</button>
-  </form>
-</div>
-@if(isLoading){
-  <div class="overlay">
-    <div class="spinner"></div>
+  </div>
+</div>@if(isLoading){
+<div class="overlay">
+  <div class="spinner"></div>
 </div>
 
 }
 
-<div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+<div class="modal fade" #errorModal tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="errorModalLabel">Error Message</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button (click)="closeModal()" type="button" class="btn-close" data-bs-dismiss="modal"
+          aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <p>No flights were found with the entered values.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button (click)="closeModal()" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
 </div>
+
 @if(journey.price){
 <app-journey [journey]="journey"></app-journey>
 }
