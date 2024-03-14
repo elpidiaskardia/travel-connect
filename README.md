@@ -1,7 +1,7 @@
 # Travel Connect Application
 
 ## Overview
-This project is a solution to a full-stack technical test. In the test statement, there was a mention of consuming an API that returns flight data "https://recruiting-api.....es/api/flights". However, this API was down at the time of the test, so the 'flight serve' API was created in order to complete the test.
+This project is a solution to a full-stack technical test. In the test statement, there was a mention of consuming an API that returns flight data "https://recruiting-api.....es/api/flights". However, this API was down at the time of the test, so the 'Flight Service' API was created in order to complete the test.
  
 
 ### 1. Flight Service (Built with .NET 6)
