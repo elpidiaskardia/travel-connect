@@ -1,28 +1,33 @@
-import { createReducer, createSelector, on } from "@ngrx/store";
+import { createFeatureSelector, createReducer, createSelector, on } from "@ngrx/store";
 import * as actions from "../actionsRedux/actions";
 
-export interface ApiState {
-  history: { [key: string]: any };
+export interface RequestEntry {
+  origin: string;
+  destination: string;
+  data: any | null;
 }
 
-export const initialState: ApiState = {
-  history: {},
+export interface DataState {
+  history: RequestEntry[];
+}
+
+export const initialState: DataState = {
+  history: []
 };
 
 export const apiReducer = createReducer(
   initialState,
-  on(actions.fetchSuccess, (state, { origin, destination, data }) => (
-    {
+  on(actions.fetchSuccess, (state, { origin, destination, data }) => ({
     ...state,
-    history: {
-      ...state.history,
-      [`${origin}_${destination}`]: data,
-    },
+    currentRequest: null,
+    history: [...state.history, { origin, destination, data }]
   }))
 );
-export const selectApiState = (state: { api: ApiState }) => state.api;
 
-export const selectHistory = createSelector(
-  selectApiState,
-  (state: ApiState) => state.history
+export const selectDataState = createFeatureSelector<DataState>('journey');
+
+export const selectCurrentRequest = createSelector(
+  selectDataState,
+  (state: DataState) => state.history
 );
+

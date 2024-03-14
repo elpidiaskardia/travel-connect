@@ -11,7 +11,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideHttpClient(),
     provideClientHydration(),
-    provideStore(),
+    provideStore(apiReducer),
     provideState({name:'journey', reducer: apiReducer},
      )
   ]

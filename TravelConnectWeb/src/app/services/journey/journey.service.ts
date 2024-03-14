@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, map, of, switchMap, tap, } from 'rxjs';
-import { DataState, RequestEntry } from '../../store/reducersRedux/reducers';
+import { DataState, RequestEntry, selectDataState } from '../../store/reducersRedux/reducers';
 import { Store, select } from '@ngrx/store';
 import * as actions from "../../store/actionsRedux/actions";
 
@@ -10,15 +10,11 @@ import * as actions from "../../store/actionsRedux/actions";
 })
 export class JourneyService {
 
-  constructor(private httpClient: HttpClient, private store: Store<{ data: DataState }>) { }
+  constructor(private httpClient: HttpClient, private store: Store<DataState>) { }
 
-  // getData(origin : string, destination: string): Observable<any> {
-  //   return this.httpClient.get(`/api/getJourney/${origin}/${destination}`);
-  // }
-
-  getRequestEntryByOriginAndDestination(origin: string, destination: string): Observable<RequestEntry | undefined> {
+  getRequestForStore(origin: string, destination: string): Observable<RequestEntry | undefined> {
     return this.store.pipe(
-      select('data'),
+      select(selectDataState),
       map((dataState: DataState) => {
         const entry = dataState.history.find(entry => entry.origin === origin && entry.destination === destination);
         return entry;
@@ -27,7 +23,7 @@ export class JourneyService {
   }
 
   getData(origin: string, destination: string): Observable<any> {
-    return this.getRequestEntryByOriginAndDestination(origin, destination).pipe(
+    return this.getRequestForStore(origin, destination).pipe(
       switchMap((entry) => {
         if (entry) {
           return of(entry.data);
